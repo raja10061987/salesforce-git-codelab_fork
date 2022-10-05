@@ -4,7 +4,7 @@ import getContributors from '@salesforce/apex/SFDCStopTeamController.getContribu
 export default class SfdcstopTeam extends LightningElement {
 
     contributors = [];
-
+// line added
     @wire(getContributors)
     contributorResponse({ error, data }) {
         if(data) {
