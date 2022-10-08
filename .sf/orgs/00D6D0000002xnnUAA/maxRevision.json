@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "serverMaxRevisionCounter": 32,
-=======
-  "serverMaxRevisionCounter": 16,
->>>>>>> master
+  "serverMaxRevisionCounter": 18,
   "sourceMembers": {
     "Profile__Admin": {
       "serverRevisionCounter": 1,
@@ -12,8 +8,8 @@
       "isNameObsolete": false
     },
     "ApexClass__SFDCStopTeamController": {
-      "serverRevisionCounter": 2,
-      "lastRetrievedFromServer": 2,
+      "serverRevisionCounter": 18,
+      "lastRetrievedFromServer": 18,
       "memberType": "ApexClass",
       "isNameObsolete": false
     },
@@ -89,13 +85,13 @@
       "memberType": "LightningComponentResource",
       "isNameObsolete": false
     },
-    "LightningComponentResource__sfdcstopTeam/sfdcstopTeam.html": {
+    "LightningComponentResource__sfdcstopTeam/sfdcstopTeam.js-meta.xml": {
       "serverRevisionCounter": 6,
       "lastRetrievedFromServer": 6,
       "memberType": "LightningComponentResource",
       "isNameObsolete": false
     },
-    "LightningComponentResource__sfdcstopTeam/sfdcstopTeam.js-meta.xml": {
+    "LightningComponentResource__sfdcstopTeam/sfdcstopTeam.html": {
       "serverRevisionCounter": 7,
       "lastRetrievedFromServer": 7,
       "memberType": "LightningComponentResource",
