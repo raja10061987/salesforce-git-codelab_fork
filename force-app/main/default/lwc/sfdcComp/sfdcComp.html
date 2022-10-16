@@ -1,0 +1,25 @@
+<template>
+    <div style="width: 400px;">
+    <lightning-card title="Details">
+     <p class="slds-p-horizontal_small">
+        <lightning-button label="base" variant="base"></lightning-button><br><br>
+        <lightning-button label="destructive"  variant="destructive"></lightning-button><br/><br/>
+        <lightning-button label="destructive purple" variant="destructive" class="my-button"></lightning-button><br><br>
+        <lightning-badge label="alpha" class="slds-badge_inverse"></lightning-badge><br><br>
+        <lightning-badge label="approved" class="slds-theme_success"></lightning-badge><br><br>
+        <lightning-badge label="pending badge orange" class="pending-badge"></lightning-badge><br><br>
+        <lightning-progress-bar value="50" size="large"></lightning-progress-bar><br/><br/>
+        <lightning-progress-bar value="50" size="large" variant="circular"></lightning-progress-bar><br/><br/>
+     </p>
+
+     <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+        <span class="slds-progress-bar__value badge-progress" style="width:25%">
+        <span class="slds-assistive-text ">Progress: 25%</span>
+        </span>
+    </div>
+
+     <p class="footer" style="background-color: red;">
+     </p>
+    </lightning-card>
+    </div>
+</template>
