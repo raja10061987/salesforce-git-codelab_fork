@@ -1,0 +1,15 @@
+.my-button
+{
+    --slds-c-button-destructive-color-background: purple;
+    --slds-c-button-destructive-color-background-hover: green;
+    --slds-c-button-destructive-text-color:yellow;
+}
+.pending-badge
+{
+    --sds-c-badge-color-background: black;
+    --slds-c-badge-text-color: yellow;
+}
+.badge-progress
+{
+    background-color: yellow;
+}
