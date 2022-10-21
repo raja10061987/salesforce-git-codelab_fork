@@ -1,0 +1,14 @@
+/* default lwc designe token */
+.main1
+{
+   background: var(--lwc-colorBackgroundInverse);
+   color: var(--lwc-colorTextIconDefaultDisabled);
+}
+
+/* custom token */
+.main2
+{
+    background: var(--c-backGroundColor);
+    color: var(--c-textColor);
+    border:dashed red;;
+}
