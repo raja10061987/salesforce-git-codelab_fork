@@ -1,0 +1,10 @@
+:host
+{
+    background: black;
+    color: chartreuse;
+}
+:host(.active2)
+{
+    background: greenyellow;
+    color: white;
+}

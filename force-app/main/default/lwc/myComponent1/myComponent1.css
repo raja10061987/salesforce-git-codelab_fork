@@ -1,0 +1,14 @@
+/* .active
+{
+    background: red;
+    color: green;
+} */
+:host{
+    background: red;
+    color:green;
+}
+/* .activ2
+{
+    background: greenyellow;
+    color: white;
+} */
