@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <div>
+        <lightning-record-form 
+        density="comfy"
+        record-id="001N0000028AB8mIAG" 
+        layout-type="Compact" 
+        object-api-name={objectAPIName} 
+        columns="3" 
+        onload={handleLoad} 
+        onsubmit={handleSubmit} 
+        onsuccess={handlesuccess} 
+        onerror={handleError} 
+        oncancel={handleCancel}>
+
+        </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
