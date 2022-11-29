@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="GitHub User Info">
+       <div class="slds-var-m-around_large">
+        <!-- input search -->
+        <lightning-layout vertical-align="end">
+          <lightning-layout-item flexibility="auto">
+         <lightning-input label="please enter user Name" type="search" value={userName} onchange={updateUserName}></lightning-input>
+          </lightning-layout-item>
+          <lightning-layout-item class="slds-var-p-left_small">
+            <lightning-button label="search" variant="brand" onclick={getGithubUserInfo}></lightning-button>
+          </lightning-layout-item>
+        </lightning-layout>
+        <br>
+       
+        <!-- user info -->
+        <div if:true={isUserInfoAvailable}>
+          <img src={user.image} height="200" width="200">
+          <div>{user.name}</div>
+          <br>
+          <div class="slds-var-p-vertical_xxx-small slds-text-heading_medium"> <b>github Profile: </b> <a href={gitHubUrl} target="_blank"> {gitHubUrl}</a></div>
+          <div class="slds-var-p-vertical_xxx-small slds-text-heading_medium"> <b>gitHub Blog: </b> <a href={user.blog} target="_blank">{user.blog}</a>  </div>
+          <div class="slds-var-p-vertical_xxx-small slds-text-heading_medium"><b>about: </b> {user.about}</div>
+          <div class="slds-var-p-vertical_xxx-small slds-text-heading_medium"> <b>repos: </b>  {user.repos} </div>
+          <div class="slds-var-p-vertical_xxx-small slds-text-heading_medium"> <b> gists: </b> {user.gists}</div>
+          <div class="slds-var-p-vertical_xxx-small slds-text-heading_medium"> <b>followers: </b> {user.followers}</div>
+
+        </div>
+       </div>
+    </lightning-card>
+</template>
