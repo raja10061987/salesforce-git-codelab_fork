@@ -1,0 +1,10 @@
+<aura:component>
+<aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}" includeFacets="true" ></aura:handler>
+<div class="wrapperComponent">
+    wrapper Component section begin start
+    {!v.body}
+    wrapper component section begin end
+   </div>
+</aura:component>	
+
+<!-- includeFacets="true" ==> is used to handle the wrapper components also -->
