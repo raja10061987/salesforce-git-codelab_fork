@@ -5,6 +5,27 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-string tempvar = 'Enter_your_name_here';
-System.debug('Hello World!');
-System.debug('My name is ' + tempvar);
+system.debug('hello');
+
+List<Id> actidsList = new List<Id>();
+actidsList.add('0010l00001X7l5vAAB');
+List<Contact> contList = MyContactsListController.getContacts(actidsList);
+System.debug('contList: ' + contList);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
