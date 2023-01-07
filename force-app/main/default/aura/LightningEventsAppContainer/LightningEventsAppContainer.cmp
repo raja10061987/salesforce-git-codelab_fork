@@ -10,4 +10,4 @@
  <br/>
  <c:LightningAppComp1 id="{!v.id}"></c:LightningAppComp1>
 </div>
-</aura:component>	
+</aura:component>

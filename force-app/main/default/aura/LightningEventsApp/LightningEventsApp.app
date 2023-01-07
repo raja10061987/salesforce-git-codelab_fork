@@ -12,4 +12,4 @@
 <c:LightningEventsAppContainer id="2"></c:LightningEventsAppContainer>
 </div>
 
-</aura:application>	
+</aura:application>

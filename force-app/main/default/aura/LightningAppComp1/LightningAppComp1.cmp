@@ -7,4 +7,4 @@
     <br/>
     <lightning:button onclick="{!c.fireApplicationEvent}"> Fire Event</lightning:button>
 </div>
-</aura:component>	
+</aura:component>

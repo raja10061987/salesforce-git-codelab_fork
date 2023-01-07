@@ -3,6 +3,7 @@
 <aura:attribute name="contactList" type="list"></aura:attribute>
 <aura:attribute name="contact" type="Contact" default="{'sObjectType': 'Contact',FirstName:'',LastName:'',Phone:'(040) 123-4567',Email:'example@gmail.com'}"></aura:attribute>
 <aura:handler name="init" value="{!this}" action="{!c.getContatcts}"></aura:handler>
+<aura:method name="myValidateContact" action="{!c.validateContact}"></aura:method>
 <lightning:card title="Contatcs">
 
 <p class="slds-p-horizontal_small">
@@ -25,18 +26,19 @@
  <aura:iteration items="{!v.contactList}" var="contact">
   <div class="slds-box slds-theme_default">  
  <lightning:input value="{!contact.FirstName}"></lightning:input>
- <lightning:input value="{!contact.LastName}"></lightning:input>
- <lightning:input value="{!contact.Phone}"></lightning:input>
+ <lightning:input aura:id="fieldToValidate" required="true" messageWhenValueMissing="Contact Last Name is Mandatory" value="{!contact.LastName}"></lightning:input>
+ <lightning:input aura:id="fieldToValidate" required="true" type="tel" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" messageWhenPatternMismatch="please enter phone number in this format (000) 000-0000 " value="{!contact.Phone}"></lightning:input>
  <lightning:input value="{!contact.Email}"></lightning:input>
 </div>
 <br/>
  </aura:iteration>
+
 </div>
 
 
 </p>
 <aura:set attribute="actions">
-<lightning:button label="my new contact123" variant="brand" onclick="{!c.openModal}"></lightning:button>
+<lightning:button label="my new contact" variant="brand" onclick="{!c.openModal}"></lightning:button>
 <lightning:button label="delete"  variant="destructive" onclick="{!c.deleteContacts}"></lightning:button>
 <lightning:button label="New Contact" onclick="{!c.createContact}"></lightning:button>
 <lightning:button name="edit" variant="brand" label="edit" onclick="{!c.editContact}"></lightning:button>
@@ -57,16 +59,17 @@
 
       <!-- Modal Body -->
     <div class="slds-modal__content slds-p-around_medium" id="modalDescription">
+      <!-- validation added -->
     <lightning:input label="First Name" value="{!v.contact.FirstName}"></lightning:input>
-    <lightning:input label="Last Name" value="{!v.contact.LastName}" required="true"></lightning:input>
-    <lightning:input label="Phone" value="{!v.contact.Phone}"></lightning:input>
-    <lightning:input label="Email" value="{!v.contact.Email}"></lightning:input>
+    <lightning:input name="lastname" aura:id="contactFieldToValidate" messageWhenValueMissing="please enter Last Name" label="Last Name" value="{!v.contact.LastName}" required="true"></lightning:input>
+    <lightning:input name="phone" aura:id="contactFieldToValidate" required="true" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" messageWhenPatternMismatch="please enter phone number in this format (xxx) xxx-xxxx" label="Phone" value="{!v.contact.Phone}"></lightning:input>
+    <lightning:input name="email" aura:id="contactFieldToValidate" required="true" type="email" label="Email" value="{!v.contact.Email}"></lightning:input>
     </div>
 
     <!-- Modal footer -->
     <div class="slds-modal__footer">
     <lightning:button variant="brand" onclick="{!c.closeModal}">Cancel</lightning:button>
-    <lightning:button variant="brand" onclick="{!c.recordSaveContact}">Save12</lightning:button>
+    <lightning:button variant="brand" onclick="{!c.recordSaveContact}">Save</lightning:button>
     </div>
 
 
@@ -82,4 +85,4 @@
 
 
 
-</aura:component>	
+</aura:component>

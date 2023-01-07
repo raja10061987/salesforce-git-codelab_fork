@@ -65,7 +65,3 @@ export default class GitHubInfo extends LightningElement {
     }
 
 }
-
-
-
-

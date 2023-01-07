@@ -21,4 +21,4 @@
        <lightning:button label="calculate total income" name="totalIncome" variant="brand" onclick="{!c.fireTotalIncomeComponentEvent}"></lightning:button>
       </p>
    </lightning:card>
-</aura:component>	
+</aura:component>

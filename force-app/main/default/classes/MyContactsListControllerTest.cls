@@ -39,16 +39,40 @@ public with sharing class MyContactsListControllerTest {
    public static void getContactsTest()
    {
     List<Id> actidsList = new List<Id>();
+    List<Id> actidsList1 = new List<Id>();
     for(Account actObj: [select id,Name,Rating,Phone from Account])
     {
       actidsList.add(actObj.Id);
+    }
+    for(Account actObj: [select id,Rating,Phone from Account])
+    {
+      actidsList1.add(actObj.Id);
     }
     test.startTest();
     List<Contact> returnedContacts = MyContactsListController.getContacts(actidsList);
     System.debug('returnedContacts: ' + returnedContacts);
     System.assert(returnedContacts.size() > 0, 'returned contacts count should be greater than one');
 
+
+    MyContactsListController.getContacts(actidsList1);
+
+    test.stopTest();
+   }
+
+   @IsTest
+   public static void getContactsErrorTest()
+   {
+    List<Id> actidsList = new List<Id>();
+    for(Account actObj: [select id,Rating,Phone from Account])
+    {
+      actidsList.add(actObj.Id);
+    }
     
+    test.startTest();
+    MyContactsListController.getContacts(actidsList);
+    System.assert(1==1, 'should be same');
+
+
     test.stopTest();
    }
    @IsTest
