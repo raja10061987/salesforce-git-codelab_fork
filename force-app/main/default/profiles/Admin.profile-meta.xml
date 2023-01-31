@@ -6,6 +6,22 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>Calculate2NumbersCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Calculate2NumbersCtrlTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ContactController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ContactControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MyContactsListController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -18,6 +34,9 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
+    <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+    </layoutAssignments>
     <pageAccesses>
         <apexPage>sfdcstop</apexPage>
         <enabled>true</enabled>
