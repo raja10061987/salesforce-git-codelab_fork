@@ -1,0 +1,19 @@
+<aura:component controller="Calculate2NumbersCtrl">
+    <aura:attribute name="fNumber1" type="decimal"></aura:attribute>
+    <aura:attribute name="sNumber1" type="decimal"></aura:attribute>
+    <aura:attribute name="result1" type="decimal"></aura:attribute>
+<br/>
+<div>calculate two numbers</div><br/>
+<div>
+    <ui:inputNumber label="First Number" aura:id="fNumber" value="{!v.fNumber1}"></ui:inputNumber>
+</div><br/>
+<div>
+    <ui:inputNumber label="second Number" aura:id="sNumber" value="{!v.sNumber1}"></ui:inputNumber>
+</div><br/>
+<div>
+    <ui:inputNumber label="result: " aura:id="result" value="{!v.result1}"></ui:inputNumber>
+</div><br/>
+<div>
+    <ui:button label="click me" press="{!c.calculate}"></ui:button>
+</div>
+</aura:component>

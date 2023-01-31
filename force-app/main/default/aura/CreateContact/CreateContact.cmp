@@ -1,0 +1,92 @@
+<aura:component controller="ContactController">
+<aura:attribute name="contactList" type="List"></aura:attribute>
+<!-- <aura:attribute name="contact" type="Contact" default="{'sObjectType':'Contact','FirstName': '','LastName':'','Phone':'','Email':'example@gmail.com'}"></aura:attribute> -->
+<aura:attribute name="contact" type="Contact" default="{'sObjectType': 'Contact','FirstName': 'suman','LastName': '','Email': 'aa@gmail.com','Phone': ''}"></aura:attribute>
+<aura:attribute name="contactId" type="string"></aura:attribute>
+<aura:handler name="init" value="{!this}" action="{!c.fetchContacts}"></aura:handler>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+    <thead>
+    <tr class="slds-line-height_reset">
+    <th class="" scope="col">
+    <div class="slds-truncate" title="First Name">First Name</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Last Name">Last Name</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Phone">Phone</div>
+    </th>
+    <th class="" scope="col">
+    <div class="slds-truncate" title="Email">Email</div>
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+    <aura:iteration items="{!v.contactList}" var="contObj" indexVar="index">
+    <tr class="slds-hint-parent">
+
+    <th data-label="{!contObj.FirstName}" scope="row">
+    <div class="slds-truncate" title="{!contObj.FirstName}">
+    <a href="#" tabindex="-1">{!contObj.FirstName}</a>
+    </div>
+    </th>
+
+    <td data-label="{!contObj.LastName}">
+    <div class="slds-truncate" title="{!contObj.LastName}">{!contObj.LastName}</div>
+    </td>
+
+    <td data-label="{!contObj.Phone}">
+    <div class="slds-truncate" title="{!contObj.Phone}">{!contObj.Phone}</div>
+    </td>
+
+    <td data-label="{!contObj.Email}">
+    <div class="slds-truncate" title="{!contObj.Email}">{!contObj.Email}</div>
+    </td>
+
+    </tr>
+    </aura:iteration>
+
+
+    </tbody>
+</table>
+<br/><br/>
+
+<div class="slds-form-element">
+    <label for="FirstName">
+     First Name
+    </label>
+    <div class="slds-form-element__control">
+    <lightning:input type="text" id="FirstName" placeholder="Please enter First Name" value="{!v.contact.FirstName}" class="slds-input" />
+    </div>
+
+    <label class="slds-form-element__label" for="LastName">
+        <abbr class="slds-required" title="required">* </abbr>Last Name
+        </label>
+        <div class="slds-form-element__control">
+        <lightning:input type="text" id="LastName" placeholder="please enter Last Name…" value="{!v.contact.LastName}" required="" class="slds-input" />
+        </div>
+
+        <label class="slds-form-element__label" for="Phone">
+            Phone
+           </label>
+           <div class="slds-form-element__control">
+           <lightning:input type="text" id="Phone" placeholder="Please enter Phone1" value="{!v.contact.Phone}"  class="slds-input" />
+           </div>
+
+           <label class="slds-form-element__label" for="Email">
+            Email
+           </label>
+           <div class="slds-form-element__control">
+           <lightning:input type="text" id="Email" placeholder="Please enter Email" value="{!v.contact.Email}"  class="slds-input" />
+           </div><br/>
+           <lightning:button variant="brand" label="Save Contact" title="Save Contact" onclick="{!c.SaveContact}" class="slds-align_absolute-center"></lightning:button>
+           <span>Newly inerted contactId@@: {!v.contactId}</span>
+         
+
+</div>
+
+
+
+
+
+</aura:component>
