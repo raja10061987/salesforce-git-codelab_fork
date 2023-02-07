@@ -1,0 +1,42 @@
+<aura:component controller="AuraPropertiesExample">
+<aura:attribute name="wrapperObject" type="Object"></aura:attribute>
+<aura:attribute name="accountOptions" type="List"></aura:attribute>
+<aura:attribute name="actList" type="List"></aura:attribute>
+<aura:attribute name="columns" type="List"></aura:attribute>
+<aura:handler name="init" value="{!this}" action="{!c.loadData}"></aura:handler>
+<aura:attribute name="options" type="List" default="[{'label': 'India','value':'India1'},{'label': 'USA','value': 'USA1'}]"></aura:attribute>
+<aura:attribute name="optionSelected" type="string" default="0010l00001XiLM4AAN"></aura:attribute>
+<lightning:combobox label="Account Pick List" value="{!v.optionSelected}" placeholder="please select account Name" options="{!v.accountOptions}"></lightning:combobox>
+<br/>
+{!v.optionSelected}
+<br/>
+<div>
+    <lightning:icon iconName="standard:account" ></lightning:icon>
+    Account Details
+</div>
+<div>
+   resourceName: <ui:outputText value="{!v.wrapperObject.resourceName}"></ui:outputText>
+</div>
+<div>
+    contactNumber:  <ui:outputText value="{!v.wrapperObject.contactNumber}"></ui:outputText>
+</div>
+<div>
+    email: <ui:outputText value="{!v.wrapperObject.email}"></ui:outputText>
+</div>
+<div>
+    income: <ui:outputText value="{!v.wrapperObject.income}"></ui:outputText>
+</div>
+<br/>
+<div>
+    <aura:iteration items="{!v.wrapperObject.accountList}" var="eachObject">
+       {!eachObject.Name}<br/>
+       {!eachObject.Industry}<br/>
+       {!eachObject.Type}<br/>
+       <p>-----------------------------------------------------------------</p><br/>
+    </aura:iteration>
+</div>
+<br/>
+<div style="height: 300px">
+<lightning:datatable keyField="Id" data="{!v.actList}" columns="{!v.columns}" hideCheckboxColumn="true"></lightning:datatable>
+</div>
+</aura:component>	
