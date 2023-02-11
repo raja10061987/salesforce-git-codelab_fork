@@ -1,0 +1,5 @@
+<design:component >
+<design:attribute name="title" label="please enter title"></design:attribute>
+<design:attribute name="description" label="please enter description"></design:attribute>
+<design:attribute name="objectApiName" label="please specify object Name" datasource="apex://ApexUtil"></design:attribute>
+</design:component>
