@@ -1,0 +1,14 @@
+<aura:component controller="ApexUtil" implements="flexipage:availableForAllPageTypes">
+<h1>LightningDesignPropertiesExample</h1>
+<aura:attribute name="objectApiName" type="string" default="Account"></aura:attribute>
+<aura:attribute name="recordList" type="List"></aura:attribute>
+<aura:attribute name="columns" type="List"></aura:attribute>
+<aura:attribute name="title" type="string" default="account Records" ></aura:attribute>
+<aura:attribute name="description" type="string" default="welcome Rajasekhar" ></aura:attribute>
+<aura:handler name="init" value="{!this}" action="{!c.loadObjectData}"></aura:handler>
+<div style="width: 300px;">
+<h1>{!v.title}</h1>
+<lightning:datatable keyField="Id" columns="{!v.columns}" data="{!v.recordList}"></lightning:datatable>
+<h1>{!v.description}</h1>
+</div>
+</aura:component>	
