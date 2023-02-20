@@ -1,0 +1,15 @@
+<aura:component>
+    <!-- <aura:registerEvent name="componentEvent" type="c:CalculatorEvent"></aura:registerEvent>
+  handle/lister event -->
+  <aura:handler  event="c:CalculatorEvent" action="{!c.handleEvent}"></aura:handler>
+    <aura:attribute name="title" type="string" default="Calculator Result"></aura:attribute>
+    <aura:attribute name="result" type="integer"></aura:attribute>
+<lightning:card>
+    <aura:set attribute="title">
+     <lightning:icon iconName="utility:connected_apps" size="small"></lightning:icon>
+     {!v.title}
+    </aura:set>
+    {!v.result}
+    
+</lightning:card>
+</aura:component>	

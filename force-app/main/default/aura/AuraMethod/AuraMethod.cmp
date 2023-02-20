@@ -1,0 +1,7 @@
+<aura:component controller="AccountRecordsController">
+<aura:method name="retriveRecords" description="this is child component Method">
+    <aura:attribute name="callBack" type="Function"></aura:attribute>
+    <aura:attribute name="objectName" type="string"></aura:attribute>
+    <aura:attribute name="fieldNames" type="string"></aura:attribute>
+</aura:method>
+</aura:component>	
