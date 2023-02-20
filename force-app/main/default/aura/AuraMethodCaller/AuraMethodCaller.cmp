@@ -1,0 +1,18 @@
+<aura:component>
+    <aura:attribute name="recordsList" type="List"></aura:attribute>
+<c:AuraMethod aura:id="child"></c:AuraMethod>
+
+<aura:if isTrue="{!v.recordsList.length}">
+    <h1>Account Records</h1>
+    <aura:iteration items="{!v.recordsList}" var="Obj">
+      {!Obj.Email}<br/>
+    </aura:iteration>
+<aura:set attribute="else">
+<p>please select clck me button to retrive records...</p>
+</aura:set>
+
+</aura:if>
+
+<br/>
+<lightning:button variant="brand" label="Retrive Records" onclick="{!c.getRecords}"></lightning:button>
+</aura:component>	

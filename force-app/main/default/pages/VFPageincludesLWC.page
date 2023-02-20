@@ -1,0 +1,12 @@
+<apex:page>
+    <h1>it is VF page. LWC component included in VF page</h1>
+    <apex:includeLightning></apex:includeLightning>
+    <div id="lightning"></div>
+    <script>
+        $Lightning.use('c:sfdcstopApp', function () {
+            $Lightning.createComponent('c:sfdcstopTeam', {}, 'lightning', function (comp) {
+                // do the stupp
+            });
+        });
+    </script>
+</apex:page>

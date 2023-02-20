@@ -1,0 +1,9 @@
+<aura:component>
+<h1>container Component</h1>
+<aura:registerEvent name="cmpEvent" type="c:selectedValEvent"></aura:registerEvent>
+<aura:handler name="cmpEvent" event="c:selectedValEvent" action="{!c.handleEvent}" ></aura:handler>
+<aura:attribute name="selectedValue" type="string"></aura:attribute>
+<span>selected Value: {!v.selectedValue}</span>
+<!-- <c:ComboBoxInnerComponent cmpEvent="{!c.handleEvent}"></c:ComboBoxInnerComponent> -->
+<c:ComboBoxInnerComponent></c:ComboBoxInnerComponent>
+</aura:component>	
