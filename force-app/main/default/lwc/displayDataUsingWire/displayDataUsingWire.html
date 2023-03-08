@@ -1,0 +1,13 @@
+<template>
+    <!-- <lightning-card title="display List of records">
+       <template for:each={actsData} for:item="actsRecord" for:index="index">
+         <div key={actsRecord.Id}>
+             {actsRecord.Name}
+             <br/><br/>
+         </div>
+       </template>
+    </lightning-card> -->
+    <div style="width: 800px;">
+      <lightning-datatable data={actsData} columns={columns} key-field="Id"></lightning-datatable>
+    </div>
+</template>

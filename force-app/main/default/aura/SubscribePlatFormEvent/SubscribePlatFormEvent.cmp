@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable">
+
+<aura:attribute name="notifications" type="List"></aura:attribute>
+<aura:attribute name="isEventReceived" type="boolean"></aura:attribute>
+<lightning:empApi aura:id="empAPI"></lightning:empApi>
+<aura:handler name="init" value="{!this}" action="{!c.subscribeMethod}"></aura:handler>
+<lightning:card title="account notifications">
+<p class="slds-p-horizontal_small">
+<aura:if isTrue="{!v.isEventReceived}">
+<aura:iteration items="{!v.notifications}" var="item">
+   <span>{!item.Name} - {!item.Phone}</span><br/>
+</aura:iteration>
+</aura:if>
+</p>
+</lightning:card>
+</aura:component>	
