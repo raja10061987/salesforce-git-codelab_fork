@@ -1,0 +1,7 @@
+<aura:component implements="flexiPage:availableForAllPageTypes,force:hasRecordId">
+   <!-- Home page,Record page,app page -->
+   <lightning:card title="Lightning AUra page">
+    <h1>Lightning Aura page Example</h1>
+    <span>record Id: {!v.recordId}</span>
+   </lightning:card>
+</aura:component>	
